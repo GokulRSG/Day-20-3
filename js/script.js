@@ -9,7 +9,7 @@ const searchContain = document.getElementById("search-result-container");
 
 async function fetchData(inputword){
     //descriptions.innerHTML="";
-    
+    descriptions.innerHTML = "";
     SearchWord.innerText = `Searching Word "${inputword}"`; 
     const response = await fetch(Baseurl+inputword);
     const resData = await response.json().then((res) => res).catch((error) => error.toString());
